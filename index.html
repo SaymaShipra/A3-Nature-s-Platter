@@ -36,6 +36,16 @@
             fontFamily: {
               sora: ["sora", "serif"],
             },
+
+            keyframes: {
+              moveup: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              moveup: "moveup 0.5s ease-out forwards",
+            },
           },
         },
       };
@@ -44,22 +54,6 @@
     <style>
       .sora-font {
         font-family: "Sora", serif;
-      }
-
-      .banner-img.banner-text {
-        animation-delay: 1s;
-      }
-
-      .banner-text {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: moveup 0.5s linear forwards;
-      }
-      @keyframes moveup {
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
       }
     </style>
   </head>
@@ -115,20 +109,7 @@
               </div>
               <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button" class="lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    />
-                  </svg>
+                  <img src="c2-assets/bars-3.png" alt="" />
                 </div>
                 <ul
                   tabindex="0"
@@ -147,12 +128,12 @@
         <div class="mt-24">
           <div class="space-y-9 text-center">
             <h1
-              class="banner-text text-5xl lg:text-6xl font-semibold leading-[1.2]"
+              class="banner-text text-5xl lg:text-6xl font-semibold leading-[1.2] animate-moveup"
             >
               Freshness <span class="text-[#179800]">You Can Count</span> <br />
               On, Prices You’ll Love!
             </h1>
-            <p class="banner-text text-[1rem] leading-[2] md:text-xl">
+            <p class="text-[1rem] leading-[2] md:text-xl">
               Shop your daily essentials at unbeatable prices. From fresh
               produce to pantry <br />
               staples, we’ve got you covered every day!
@@ -161,7 +142,7 @@
 
           <div class="pt-8 flex justify-center items-center">
             <img
-              class="banner-img banner-text"
+              class="animate-moveup"
               src="c2-assets/hero-vegetables.png"
               alt=""
             />
@@ -240,7 +221,7 @@
             class="grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-3 gap-3 lg:gap-7"
           >
             <div
-              class="col-span-2 lg:row-span-3 lg:col-span-2 w-[357px] h-[411px] mx-auto lg:w-[500px] bg-no-repeat relative bg-right-bottom bg rounded-xl bg-gradient-to-b from-[#53DB3A] to-white"
+              class="col-span-2 lg:row-span-3 lg:col-span-2 w-[352px] h-[411px] lg:w-[500px] bg-no-repeat relative bg-right-bottom bg rounded-xl bg-gradient-to-b from-[#53DB3A] to-white md:w-full"
             >
               <div class="space-y-5 pl-8 pt-12">
                 <h3 class="text-white text-3xl font-medium">30% off</h3>
@@ -250,7 +231,9 @@
                 </p>
                 <button class="btn">Bye Now</button>
               </div>
-              <div class="relative -top-[5px] left-36 lg:-top-20 lg:left-52">
+              <div
+                class="relative -top-[5px] left-36 lg:-top-20 lg:left-52 md:-top-44 md:left-60"
+              >
                 <img
                   class="w-7/12"
                   src="c2-assets/vegetable-offer.png"
@@ -430,7 +413,7 @@
           </h3>
           <!-- 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4"> -->
-          <div class="flex gap-4 flex-col lg:flex-row">
+          <div class="flex gap-4 flex-col md:flex-row lg:flex-row">
             <!-- card-1 -->
 
             <div
@@ -487,6 +470,92 @@
                   alt=""
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- customer review section -->
+
+      <section class="w-10/12 mx-auto text-center">
+        <h3 class="text-4xl font-semibold text-[#179800] mb-5 mt-32">
+          Customer Speak, Nature's Platter Listens.
+        </h3>
+        <p class="text-lg mb-20">
+          "We value your feedback. Read what customers say about our products
+          and <br />
+          service. Your opinions help us improve every day."
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <div class="card bg-[#EFEBE3] shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                class="p-1 bg-white rounded-full w-24"
+                src="c2-assets/user-1.png"
+                alt=""
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title opacity-95">Terry Dokdis</h2>
+              <div class="card-icon text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="opacity-80 px-1">
+                "I've been ordering my groceries for the past year, and it's
+                been a game-changer! The delivery is always on time, and the
+                produce is fresh.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#EFEBE3] shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="c2-assets/user-2.png"
+                alt="Shoes"
+                class="p-1 bg-white rounded-full w-24"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title opacity-95">nolen francle</h2>
+              <div class="card-icon text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="opacity-80 p-1">
+                The customer support is top-notch, and they promptly resolved an
+                issue I had with my last order. Highly recommend!
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#EFEBE3] shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="c2-assets/user-3.png"
+                alt="Shoes"
+                class="p-1 bg-white rounded-full w-24"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title opacity-95">Kaylyan culhane</h2>
+              <div class="card-icon text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="opacity-80 p-1">
+                The quality of the groceries is good, but the delivery charges
+                are a bit high compared to other services. Also, it would be
+                great if they could offer more discounts and promotions.
+              </p>
             </div>
           </div>
         </div>
