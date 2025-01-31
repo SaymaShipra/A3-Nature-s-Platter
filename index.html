@@ -52,10 +52,12 @@
                 <img class="lg:hidden" src="c2-assets/logo2.png" alt="" />
               </div>
               <div class="navbar-center hidden lg:flex">
-                <ul class="gap-8 menu-horizontal px-1 text-xl text-[#111111]">
-                  <li><a>Products</a></li>
-                  <li><a>services</a></li>
-                  <li><a>contact us</a></li>
+                <ul
+                  class="gap-8 menu-horizontal px-1 text-xl text-[#111111] cursor-pointer"
+                >
+                  <li><a class="hover:text-green-600">Products</a></li>
+                  <li><a class="hover:text-green-600">services</a></li>
+                  <li><a class="hover:text-green-600">contact us</a></li>
                 </ul>
               </div>
               <div class="navbar-end space-x-3 cursor-pointer hidden lg:flex">
@@ -79,7 +81,9 @@
                 </button>
 
                 <button>
-                  <a class="btn bg-[#179800] text-white">Register</a>
+                  <a class="btn hover:bg-green-600 bg-[#179800] text-white"
+                    >Register</a
+                  >
                 </button>
               </div>
               <div class="dropdown dropdown-end">
@@ -193,8 +197,8 @@
 
       <!-- popular products section  -->
       <!-- h-[402px] w-[424px] -->
-      <section class="mb-40">
-        <div class="w-10/12 mx-auto">
+      <section class="mb-40 mt-36 bg-[#EFEBE3]">
+        <div class="w-10/12 mx-auto pt-2 pb-32">
           <h3 class="text-4xl font-semibold text-[#179800] mb-12 mt-32">
             Popular Products
           </h3>
@@ -343,7 +347,7 @@
       <!-- offer section -->
 
       <section>
-        <div class="w-10/12 mx-auto mb-32">
+        <div class="w-10/12 mx-auto">
           <h3 class="text-4xl font-semibold text-[#179800] mb-12 mt-32">
             Arrival & Offers
           </h3>
@@ -362,7 +366,7 @@
                   alt=""
                 />
                 <button
-                  class="btn w-[175px] bg-[#63B76D] border-none text-white mt-3 mb-2 lg:mt-8 lg:mb-6"
+                  class="btn hover:bg-green-300 w-[175px] bg-[#63B76D] border-none text-white mt-3 mb-2 lg:mt-8 lg:mb-6"
                 >
                   Cook Exotic Dishes
                 </button>
@@ -386,12 +390,12 @@
             >
               <div class="ml-3 lg:ml-9 pb-3 lg:pb-6">
                 <img
-                  class="pt-3 lg:pt-12 w-16 lg:w-24"
+                  class="lg:pt-9 w-16 lg:w-24"
                   src="c2-assets/india-gate-logo.png"
                   alt=""
                 />
                 <button
-                  class="btn w-[175px] bg-[#2A4D97] border-none text-white mb-2 lg:mt-8 lg:mb-6"
+                  class="btn w-[175px] hover:bg-blue-600 bg-[#2A4D97] border-none text-white mb-2 mt-2 lg:mt-5"
                 >
                   World’s No.1 Rice
                 </button>
@@ -413,19 +417,27 @@
 
       <!-- news section -->
 
-      <section>
-        <div class="w-10/12 mx-auto bg-[#EFEBE3] rounded-3xl">
-          <div class="w-9/12 mx-auto flex justify-between items-center">
+      <section class="relative top-55">
+        <div
+          class="w-10/12 mx-auto bg-[#EFEBE3] rounded-3xl pt-5 pb-5 lg:pt-12 lg:pb-12"
+        >
+          <div
+            class="w-9/12 mx-auto flex flex-col gap-3 text-center lg:justify-between lg:items-center lg:text-left lg:flex-row"
+          >
             <div>
               <img src="c2-assets/vegetable-busket.png" alt="" />
             </div>
             <div>
-              <h3 class="text-4xl font-semibold mb-5">Get Groceries News</h3>
-              <p class="text-xl mb-8">
+              <h3
+                class="text-[#179800] lg:text-black text-2xl lg:text-4xl font-semibold mb-2 lg:mb-4"
+              >
+                Get Groceries News!
+              </h3>
+              <p class="lg:text-xl mb-3 lg:mb-8">
                 Exclusive training tips, ticks, product deals and more.
               </p>
               <input
-                class="bg-white placeholder:text-[#C4C4C4] py-3 px-14 mb-7"
+                class="bg-white placeholder:pl-4 placeholder:text-[#C4C4C4] h-13 w-72 mb-4 lg:mb-7"
                 placeholder="Enter email..."
                 type="email"
               />
@@ -441,6 +453,49 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <!-- footer section -->
+    <footer class="bg-[#179800]">
+      <footer
+        class="footer text-white text-base-content w-10/12 mx-auto p-10 lg:grid lg:gap-96 pt-80 pb-28"
+      >
+        <nav>
+          <img src="c2-assets/logo-footer.png" alt="" />
+          <p class="lg:text-xl mt-2">
+            Discover a world of treats, toys, and <br />
+            essentials handpicked for your furry friends
+          </p>
+        </nav>
+        <nav class="lg:text-xl">
+          <a class="link link-hover">Product</a>
+          <a class="link link-hover">services</a>
+          <a class="link link-hover">Contact us</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="grid grid-flow-col gap-5">
+            <a href="#">
+              <img src="c2-assets/facebook.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="c2-assets/instragram.png" alt="" />
+            </a>
+            <a href="#"><img src="c2-assets/In.png" alt="" /></a>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </footer>
+    </footer>
   </body>
 </html>
