@@ -1,11 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>NAture's Platter</title>
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/c16f9e5726.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Daisy UI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- custom css -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --font-sora: Sora, serif;
+        --color-accent: #179800;
+        --color-secondary: #efebe3;
+      }
+    </style>
   </head>
-  <body>
-    <h1>jhjk nkjhfg</h1>
+  <body class="font-sora">
+    <header class="bg-[#EFEBE3]">
+      <!-- nav section -->
+      <div class="">
+        <div class="border border-[#179800] lg:border-none">
+          <nav class="w-11/12 mx-auto p-3">
+            <div class="navbar sm:flex justify-between items-center">
+              <div class="navbar-start">
+                <img
+                  class="hidden lg:flex"
+                  src="c2-assets/logo-header.png"
+                  alt=""
+                />
+                <img class="lg:hidden" src="c2-assets/logo2.png" alt="" />
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="gap-8 menu-horizontal px-1 text-xl text-[#111111]">
+                  <li><a>Products</a></li>
+                  <li><a>services</a></li>
+                  <li><a>contact us</a></li>
+                </ul>
+              </div>
+              <div class="navbar-end space-x-3 cursor-pointer hidden lg:flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 30 30"
+                >
+                  <path
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                  ></path>
+                </svg>
+
+                <img class="w-7" src="c2-assets/cart.png" alt="" />
+
+                <button class="">
+                  <a class="btn btn-outline btn-success" href="">Login</a>
+                </button>
+
+                <button>
+                  <a class="btn bg-[#179800] text-white">Register</a>
+                </button>
+              </div>
+              <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                >
+                  <li><a>Product</a></li>
+                  <li><a>Services</a></li>
+                  <li><a>Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- banner section -->
+
+        <div class="mt-24">
+          <div class="space-y-9 text-center">
+            <h1 class="text-5xl lg:text-6xl font-semibold leading-[1.2]">
+              Freshness <span class="text-[#179800]">You Can Count</span> <br />
+              On, Prices You’ll Love!
+            </h1>
+            <p class="text-[1rem] leading-[2] md:text-xl">
+              Shop your daily essentials at unbeatable prices. From fresh
+              produce to pantry <br />
+              staples, we’ve got you covered every day!
+            </p>
+          </div>
+
+          <div class="pt-8 flex justify-center items-center">
+            <img class="" src="c2-assets/hero-vegetables.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- service section -->
+      <section class="w-10/12 mx-auto">
+        <h3 class="text-4xl font-semibold text-[#179800] mb-12 mt-32">
+          Service
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <div class="card bg-[#EFEBE3] shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                class="p-3 bg-white rounded-full"
+                src="c2-assets/service.png"
+                alt=""
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title opacity-95">24/7 Services</h2>
+              <p class="opacity-80 px-1">
+                Shop anytime, anywhere! Our user-friendly website allows you to
+                browse and purchase groceries at your convenience.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#EFEBE3] shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="c2-assets/delivery.png"
+                alt="Shoes"
+                class="p-3 bg-white rounded-full"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title opacity-95">Fast Delivery</h2>
+              <p class="opacity-80 p-1">
+                We offer same-day delivery and express delivery options to
+                ensure your groceries arrive fresh and on time.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#EFEBE3] shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="c2-assets/healthy.png"
+                alt="Shoes"
+                class="p-3 bg-white rounded-full"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title opacity-95">Healthy Products</h2>
+              <p class="opacity-80 p-1">
+                we offer a wide range of organic, natural, and healthy products
+                to support your well-being. Shop anytime and get fresh,
+                high-quality groceries delivered to your doorstep!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- popular products section  -->
+      <!-- h-[402px] w-[424px] -->
+      <section class="mb-40">
+        <div class="w-10/12 mx-auto">
+          <h3 class="text-4xl font-semibold text-[#179800] mb-12 mt-32">
+            Popular Products
+          </h3>
+
+          <div class="grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-3 gap-7">
+            <div
+              class="col-span-2 lg:row-span-3 lg:col-span-2 h-[402px] bg-slate-100 bg-no-repeat relative bg-right-bottom bg rounded-xl"
+              style="background-image: url(c2-assets/vegetable-offer.png)"
+            >
+              <div class="space-y-5 pl-8 pt-12">
+                <h3 class="text-white text-3xl font-medium">30% off</h3>
+                <p class="text-[1rem]">
+                  Discover a world of treats <br />, toys, and essentials
+                  handpicked for
+                </p>
+                <button class="btn">Bye Now</button>
+              </div>
+            </div>
+            <div class="rounded-xl">
+              <div class="card card-side bg-base-100 shadow-md pl-5">
+                <figure>
+                  <img src="c2-assets/onion.png" alt="" />
+                </figure>
+                <div class="p-5">
+                  <div class="rating rating-sm">
+                    <input type="radio" name="rating-9" class="rating-hidden" />
+                    <input
+                      type="radio"
+                      name="rating-9"
+                      class="mask mask-star-2 bg-yellow-400"
+                    />
+                    <span class="ml-2">4.9</span>
+                  </div>
+                  <h2 class="card-title">Onion 1KG</h2>
+                  <p>$39.99</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+              </h1>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+              </h1>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet <br />
+                consectetur adipisicing
+              </h1>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+                deserunt autem at saepe ipsam delectus, exercitationem
+              </h1>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+                deserunt autem at saepe ipsam delectus, exercitationem
+              </h1>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+                deserunt autem at saepe ipsam delectus, exercitationem
+              </h1>
+            </div>
+            <div class="bg-slate-400">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+                deserunt autem at saepe ipsam delectus, exercitationem
+              </h1>
+            </div>
+            <div class="bg-slate-400 hidden lg:flex">
+              <h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
+                deserunt autem at saepe ipsam delectus, exercitationem
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>
